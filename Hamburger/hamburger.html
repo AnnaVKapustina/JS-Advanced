@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Конструктор бургера:</h1>
+    <form id="burger" action="#">
+        <fieldset>
+            <legend>Размер</legend>
+            <label for="smallBurger">Маленький
+                <input type="radio" name="size" value="Small" id="smallBurger" data-price="50" data-kkal="20" checked />
+            </label>
+            <label for="bigBurger">Большой
+                <input type="radio" name="size" value="Large" id="bigBurger" data-price="100" data-kkal="40" />
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Начинка</legend>
+            <label id="stuffing">Сыр
+                <input type="radio" name="staffing" value="Cheese" id="cheese" data-price="10" data-kkal="20" checked />
+            </label>
+            <label id="stuffing">Салат
+                <input type="radio" name="staffing" value="Salad" id="salad" data-price="20" data-kkal="5" />
+            </label>
+            <label id="stuffing">Картофель
+                <input type="radio" name="staffing" value="Potato" id="potato" data-price="15" data-kkal="10" />
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Дополнительно</legend>
+            <label>Майонез
+                <input type="checkbox" name="topping" value="Mayonez" id="mayonez" data-price="20" data-kkal="5"
+                    checked />
+            </label>
+            <label>Специи
+                <input type="checkbox" name="topping" value="Spice" id="spice" data-price="15" data-kkal="0" />
+            </label>
+        </fieldset>
+        <input type="button" value="ЗАКАЗАТЬ" name="order" id="order">
+        <h3>Стоимость гамбургера: <span id="total_price">0</span> рублей</h3>
+        <h3>Калорийность: <span id="total_kkal">0</span> kkal</h3>
+    </form>
+    <script src="hamburger.js"></script>
+    <script>
+        window.onload = () => {
+            document.querySelector('#order').addEventListener('click', () => {
+                let hamburger = new Hamburger('size', 'staffing', 'topping');
+                console.log(hamburger);
+                hamburger.showResults("#total_price", "#total_kkal");
+            });
+        }
+    </script>
+
+</body>
+
+</html>
