@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <title>Интернет-магазин</title>
+</head>
+
+<body>
+   <div id="app">
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo"><svg height="30" width="40" aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="laptop" class="svg-inline--fa fa-laptop fa-w-20" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="currentColor"
+                        d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z">
+                    </path>
+                </svg>
+                YBC</a>
+                <div class="cart">
+                    <filter-comp></filter-comp>
+
+                    <button class="btn-cart" type="button" @click="show = !show">Корзина</button>
+                    <cart :cart-items="cartItems" :visibility="show"></cart>
+                </div>
+        </div>
+    </header>
+    <main>
+        <error v-if="err"></error>
+        <products :products="filtered" :img="imgProduct"></products>  
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <p class="footer__text">© 2021 Brand All Rights Reserved.</p>
+            </div>
+            <div class="footer__right">
+                <a href="#"><i class="footer__icon fab fa-facebook-square"></i></a>
+                <a href="#"><i class="footer__icon fab fa-instagram"></i></a>
+                <a href="#"><i class="footer__icon fab fa-pinterest-square"></i></a>
+                <a href="#"><i class="footer__icon fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+    </footer>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="js/ProductComponent.js"></script>
+   <script src="js/CartComponent.js"></script>
+   <script src="js/FilterComponent.js"></script>
+   <script src="js/ErrorComponent.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
