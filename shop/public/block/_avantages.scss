@@ -1,0 +1,30 @@
+.advantages {
+    background-color: #222224;
+    &__container {
+        padding: 93px 0 94px 0;
+        @include flex-between;
+        align-items: baseline;
+        gap: 30px; 
+    }
+    &__block {
+        width: 30%;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+    &__heading {
+        font-weight: normal;
+        font-size: 19.96px;
+        line-height: 24px;
+        color: #FBFBFB;
+        text-align: center;
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 13.972px;
+        line-height: 17px;
+        text-align: center;
+        color: #FBFBFB;
+    }
+}

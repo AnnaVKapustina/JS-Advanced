@@ -1,0 +1,36 @@
+.product__photo__slider {
+    background-color: #F7F7F7;
+    @include center;
+    position: relative;
+    &__arrow {
+        width: 26px;
+        height: 44px;
+        &:hover {
+            fill: $colorMain;
+        }  
+    }
+    &__btn {
+        border: none;
+        background-color: rgba(42, 42, 42, 0.15);
+        color: black;
+        height: 47px;
+        width: 47px;
+        position: absolute;
+        &__left {
+            left: 0;
+        }
+        &__right {
+            right: 0;
+        }
+    }
+}
+.product__photo {
+    &__container {
+        max-width: 597px;
+        width: 96%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

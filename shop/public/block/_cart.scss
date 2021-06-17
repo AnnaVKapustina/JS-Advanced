@@ -1,0 +1,187 @@
+.cart__block {
+    @include flex-between;
+    padding: 96px 0 128px 0;
+    &__product {
+        @include flex-column;
+        gap: 40px;
+        &__card {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            gap: 31px;
+            width: 652px;
+            height: 306px;
+            box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+                z-index: 1;
+                transition: transform .5s;
+            }
+            &__information span {
+                color: $colorMain;
+            }
+            &__information__h3 {
+                padding: 22px 0 42px 0;
+            }
+            &__heading {
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222;
+                margin: 0;
+            }
+            &__options {
+                font-size: 22px;
+                line-height: 26px;
+                color: #575757;
+                margin: 6px;
+                &__quantity {
+                    display: flex;
+                    gap: 25px;
+                    align-items: center;
+                }
+                &__border {
+                    height: 25px;
+                    width: 44px;
+                    border: 1px solid #EAEAEA;
+                    &:focus {
+                        outline: none;
+                        opacity: $hoverOpacity;
+                    }
+                    &::placeholder {
+                        text-align: center;
+                    }
+                }
+            }
+            &__close__btn {
+                background-color: white;
+                border: none;
+                padding: 0;
+                position: absolute;
+                right: 22px;
+                top: 28px;
+                &:hover {
+                    opacity: $hoverOpacity;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &__btns {
+        margin-top: 72px;
+        @include flex-between;
+    }
+    &__btn {
+        padding: 16px 40px 16px 40px;
+        background-color: white;
+        border: 1px solid #A4A4A4;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #000000;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        &:hover {
+            opacity: $hoverOpacity;
+            cursor: pointer;
+            transform: translateX(15px) rotateY(-360deg) scale(1.2);
+        }
+    }   
+    &__shipping {
+            &__h3 {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #222222;
+                margin: 21px 0 21px 0;
+            }
+            &__form {
+                display: flex;
+                flex-direction: column;
+                gap: 21px;
+                &__input {
+                    height: 45px;
+                    width: 360px;
+                    border: 1px solid #A4A4A4;
+                    &::placeholder {
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #222222;
+                        padding-left: 17px;
+                    }
+                    &:focus {
+                        outline: none;
+                        opacity: $hoverOpacity;
+                        transition: all 1s;    
+                    }
+                }
+                &__btn {
+                    padding: 10px 14px 10px 14px;
+                    background-color: white;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #4A4A4A;
+                    border: 1px solid #A4A4A4;
+                    transition: transform 2s;
+                    &:hover {
+                        opacity: $hoverOpacity;
+                        cursor: pointer;
+                        transform: rotate(360deg)
+                    }
+                }
+            }
+    }
+    &__right {
+        @include flex-column;
+        gap: 57px;
+    }
+    &__price {
+        padding: 39px 28px 42px 38px;
+        background-color: #F5F3F3;
+        &__total {
+            text-align: right;
+            padding-bottom: 21px;
+            border-bottom: 1px solid #E2E2E2;
+        }
+        &__sub {
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            margin-top: 0;
+        }
+        &__grand {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            margin: 0;
+            &__color {
+                color: $colorMain;
+            }
+        }
+        &__button {
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+        }
+        &__btn {
+            padding: 15px 35px 16px 38px;
+            background-color: $colorMain;
+            color: white;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            border: none;
+            &:hover {
+                background-color: #F5F3F3;
+                outline: 1px solid $colorMain;
+                color: $colorMain;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+    }    
+}

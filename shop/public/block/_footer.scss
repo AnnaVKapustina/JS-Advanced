@@ -1,0 +1,26 @@
+.footer {
+    background-color: #222224;
+    &__container {
+    padding: 24px 0 24px 0;
+    }
+    &__information {
+        @include flex-between;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+    &__icon {
+        color: #FBFBFB;
+        font-size: 32px;
+        &:hover {
+            color: $colorMain;
+        }
+    }
+    &__right {
+       @include center;
+        gap: 8px;
+    }
+}

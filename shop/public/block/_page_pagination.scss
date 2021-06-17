@@ -1,0 +1,46 @@
+.page__pagination {
+    @include center;
+    &__nav {
+        padding: 12px 15px 12px 15px;
+        border: 1px solid #EBEBEB;
+        @include center;
+    }
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        & li {
+            display: inline;
+            padding: 6px;
+        }
+        &__link {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #EBEBEB;
+            text-decoration: none;
+            &__color {
+                color: $colorMain;
+            }
+            &:hover {
+                color: $colorMain;
+            }
+            &:active {
+                color: $colorMain;
+            }
+            &__points {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #EBEBEB;
+            }
+        }
+    }
+    &__arrow {
+        fill: black;
+        &:hover {
+            fill: $colorMain;
+        }
+        align-items: center;
+    }
+}
