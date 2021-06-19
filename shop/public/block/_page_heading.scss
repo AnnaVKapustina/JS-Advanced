@@ -1,0 +1,31 @@
+.page__heading {
+    background-color: #F8F3F4;
+    padding: 40px 0 40px 0;
+    &__container {
+        @include flex-between;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorMain;
+        width: 50%;  
+    }
+    &__navigation {
+        padding: 20px 0 0 0;
+        &__link {
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+            &__active {
+                color: $colorMain;
+            }
+            &:hover {
+                color: $colorMain;  
+            }
+        }
+    }
+}

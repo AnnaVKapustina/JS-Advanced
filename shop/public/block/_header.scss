@@ -1,0 +1,135 @@
+.header {
+    background-color: #222222;
+    padding: 18px 0 19px 0;
+    &__container {
+        @include flex-between;
+    }
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__filter {
+        &__btn {
+            background-color: #222222;
+            color: #E8E8E8;
+            border: none;
+        }
+        &__field {
+            border: none;
+            outline: none;
+            background-color: #222222;
+            color: white;
+        }
+    }
+    &__menu {
+        display: flex;
+        gap: 25px;
+        &__link {
+            display: flex;
+            gap: 42px;
+        }
+    }        
+    &__menu__icon {
+        fill: #E8E8E8;
+        &:hover {
+            opacity: $hoverOpacity;
+            cursor: pointer;
+        }
+        &__cart {
+            background-color: #222222;
+            border: none;
+        }    
+        &__number {
+            color: white;
+            background: $colorMain;
+            text-align: center;
+            border-radius: 50%;
+            padding: 3px 6px;
+            position: relative;
+            font-size: 12px;
+            line-height: 14px;
+            bottom: 20px;
+            left: -5px;
+        }
+    }
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 79px;
+    height: 764px;
+    justify-content: flex-end;
+    display: none;
+    z-index: 5;
+    &-open {
+        display: flex;
+    }
+    &__menu {
+        background-color: white;
+        width: 232px;
+        padding: 37px;
+        position: relative;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        &__heading {
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            font-weight: 600;
+            padding: 0 0 0 39px;
+        }
+        &__close__btn {
+            position: absolute;
+            right: 17px;
+            top: 16px;
+            background-color: white;
+            border: none;
+            padding: 0;
+            &:hover {
+                cursor: pointer;
+                opacity: $hoverOpacity;
+            }
+        }
+        &__open__btn {
+            background-color: #222222;
+            border: none;
+            padding: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__main__heading {
+            font-size: 14px;
+            line-height: 17px;
+            color: $colorMain;
+            padding: 20px 0 0 0;
+            text-decoration: none;
+            &:hover {
+                opacity: $hoverOpacity;
+                cursor: pointer;
+            }
+        }
+        &__list, &__main__list {
+            list-style-type: none;
+        }
+        &__list li {
+            padding: 0 0 11px 0;
+            margin-left: -30px;
+        }
+        &__main__list li {
+            padding: 0 0 12px 0;
+        }
+        &__link {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 17px;
+            color: #6F6E6E;
+            &:hover {
+                opacity: $hoverOpacity;
+            }
+        }
+    }
+}
