@@ -1,0 +1,78 @@
+.subscribe {
+    background-image: url('../img/background_subscribe.jpg');
+    background-size: cover; 
+    &__container {
+        padding: 86px 0 156px 0;
+        @include flex-between;
+    }
+    &__photo {
+        display: block;
+        margin: 0 auto;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #222224;
+        max-width: 360px;
+    }
+    &__heading {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        color: #222224;
+        &__decor {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    &__form { 
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+    }
+    &__input {
+        background: #E1E1E1;
+        padding: 20px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        &:focus {
+            outline: none;
+            opacity: $hoverOpacity;
+            transition: all 1s;
+        }
+        &::placeholder {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            line-height: 17px;
+            color: #222224;
+            opacity: $hoverOpacity;
+            padding: 0 0 0 22px;
+        }    
+    } 
+    &__btn {
+        padding: 20px;
+        border-radius: 0 20px 20px 0;
+        border: none;
+        background-color: $colorMain;
+        font-family: 'Lato',sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #F0485E;
+            cursor: pointer;
+        }
+    }  
+}

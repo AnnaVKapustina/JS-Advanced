@@ -1,0 +1,42 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 13,
+            "product_name": "Men's hoodie",
+            "img_product": "img/13.jpg",
+            "price": 30,
+            "specific": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "imgPath": "img/13.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 12,
+            "product_name": "Women costume",
+            "img_product": "img/12.jpg",
+            "price": 80,
+            "specific": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "imgPath": "img/12.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 16,
+            "product_name": "Womens Blouse",
+            "img_product": "img/16.jpg",
+            "price": 30,
+            "specific": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "imgPath": "img/16.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 11,
+            "product_name": "Men's jackets",
+            "img_product": "img/11.jpg",
+            "price": 75,
+            "specific": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "imgPath": "img/11.jpg"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+.product {
+    &__container {
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 96px;
+    }
+    &__card {
+        @include center;
+        text-align: center;
+        &:not(:last-child) {
+            width: 31%;
+            height: 260px;
+        }
+        &:last-child{
+            width: 100%;
+            height: 180px;
+        }
+        & span {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF; 
+        }
+        & h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: $colorMain;
+        }
+        &_woman {
+            background-image: url('../img/for_woman.jpg');
+            background-size: cover;
+        }
+        &_men {
+            background-image: url('../img/for_man.jpg');
+            background-size: cover;
+        }
+        &_kids {
+            background-image: url('../img/for_kids.jpg');
+            background-size: cover;
+        }
+        &_accesories {
+            background-image: url("../img/accesories.jpg");
+            background-size: cover;
+        }
+    }
+}

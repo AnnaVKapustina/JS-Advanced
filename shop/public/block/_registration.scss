@@ -1,0 +1,83 @@
+.registration__container {
+    @include flex-between;
+    margin: 64px 0 96px 0;
+}    
+.form__registration {   
+    &__left {
+        display: flex;
+        flex-direction: column; 
+        width: 360px;
+        & h4 {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222; 
+        }
+        &__text, &__input, &__input::placeholder {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }
+        &__text {
+            margin: -6px 0 39px 0;
+        }
+        &__btn {
+            padding: 17px 29px 17px 29px;
+            background-color: $colorMain;
+            color: white;
+            border: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            &:hover {
+                background-color: #F0485E;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+                background-color: #F0485E;
+            }
+        }
+        &__input {
+            padding: 12px 17px 16px 17px;
+            background-color: #FFFFFF;
+            border: 1px solid #A4A4A4;
+            margin-bottom: 21px;
+            width: 324px;
+            &:focus {
+                outline: none;
+                opacity: $hoverOpacity;
+            }
+        }
+        &__gender {
+            display: flex;
+            gap: 20px;
+            &__input {
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                color: #000000;
+                &:focus {
+                    outline: none;
+                    opacity: $hoverOpacity;
+                }
+            }
+        }
+    }
+    &__right {
+        width: 58%;
+        &__content, &__content__list, h3 {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            &__list {
+                list-style-image: url('../img/marker.png');
+            }
+            & li {
+                padding: 0 0 16px 23px;
+            }
+        }
+    }
+}
